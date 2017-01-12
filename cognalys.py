@@ -39,11 +39,9 @@ class OTPClient(object):
         """
         Missed call the MOBILE
         """
-        response = requests.get(self.url, params={
-            'app_id': self.app_id,
-            'access_token': self.access_token,
-            'mobile': mobile,
-        })
+        response = requests.get(
+            '{self.url}?access_token={self.access_token}&mobile={mobile}'
+            '&app_id={self.app_id}'.format(self=self, mobile=mobile))
         return response.json()
 
     def verify_number(self, keymatch, otp):

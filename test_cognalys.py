@@ -35,7 +35,7 @@ class MockTest(unittest.TestCase):
 
         # get url
         args, kwargs = mrequests.get.call_args
-        url = url_from_requests_args(*args, **kwargs)
+        url = args[0]
 
         self.assertIn(self.access_token, url)
         self.assertIn(self.app_id, url)
