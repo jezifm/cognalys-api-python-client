@@ -23,7 +23,8 @@ setup(
     license=license,
     tests_require=[
         'mock',
-        'nose'
+        'nose',
+        'coverage'
     ],
     test_suite='nose.collector',
     packages=find_packages(exclude=('tests', 'docs'))
