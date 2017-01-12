@@ -26,7 +26,9 @@ response_verification = client.verify_number(KEYMATCH, OTP_NUMBER)
 
 # Python Version
 
-Python 2.6 or 2.7 are fully supported.
+Python 2.7, 3.3, 3.4 are fully supported.
+
+Python pypy, pypy3, pypy-5.3.1 are also supported.
 
 # Third Party Libraries and Dependencies
 
