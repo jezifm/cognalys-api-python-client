@@ -1,0 +1,3 @@
+*.pyc
+.eggs
+cognalys_api_python_client.egg-info
