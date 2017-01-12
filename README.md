@@ -1,5 +1,8 @@
 # About
 
+[![Build Status](https://travis-ci.org/jezifm/cognalys-api-python-client.svg?branch=master)](https://travis-ci.org/jezifm/cognalys-api-python-client)
+[![Coverage Status](https://coveralls.io/repos/github/jezifm/cognalys-api-python-client/badge.svg?branch=master)](https://coveralls.io/github/jezifm/cognalys-api-python-client?branch=master)
+
 This is the Python client library for Cognalys Two factor authentication.
 
 # Installation
