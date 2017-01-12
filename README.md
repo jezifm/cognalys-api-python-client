@@ -7,7 +7,7 @@ This is the Python client library for Cognalys Two factor authentication.
 To install, simply use `pip`:
 
 ```sh
-$ pip install git+${GIT_REPOSITORY}
+$ pip install git+git@github.com:jezifm/cognalys-api-python-client.git
 ```
 
 # Code Example
