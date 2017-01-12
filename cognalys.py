@@ -23,3 +23,38 @@ System. Basic usage:
 	  "status": "success"
 	}
 """
+import requests
+
+
+class OTPClient(object):
+    """Client for the *OTP Two Factor Authentication* of `Cognalys`
+    """
+
+    def __init__(self, access_token=None, app_id=None):
+        self.access_token = access_token
+        self.app_id = app_id
+        self.url = 'https://www.cognalys.com/api/v1/otp/'
+
+    def send_missed_call(self, mobile):
+        """
+        Missed call the MOBILE
+        """
+        response = requests.get(self.url, params={
+            'app_id': self.app_id,
+            'access_token': self.access_token,
+            'mobile': mobile,
+        })
+        return response.json()
+
+    def verify_number(self, keymatch, otp):
+        """
+        Verify mobile thru KEYMATCH and OTP. OTP is the number used
+        to perform missed call in the device.
+        """
+        response = requests.get(self.url, params={
+            'app_id': self.app_id,
+            'access_token': self.access_token,
+            'keymatch': keymatch,
+            'otp': otp
+        })
+        return response.json()
